@@ -14,6 +14,6 @@ def capture():
 
 def run_capture_job():
     capture()
-    threading.Timer(5, capture).start()
+    threading.Timer(5, run_capture_job).start()
 
 run_capture_job()
