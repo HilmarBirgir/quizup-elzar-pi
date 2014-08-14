@@ -1,11 +1,11 @@
 import picamera
 
 import os
-import datetime
 import threading
 
 camera = picamera.PiCamera()
 picture_path = '/canteen_image/'
+seconds_between_captures = 5
 
 def capture():
     file_name = os.getcwd() + picture_path + 'image.jpg'
@@ -14,6 +14,6 @@ def capture():
 
 def run_capture_job():
     capture()
-    threading.Timer(5, run_capture_job).start()
+    threading.Timer(seconds_between_captures, run_capture_job).start()
 
 run_capture_job()
