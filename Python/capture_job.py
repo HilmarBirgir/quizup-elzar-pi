@@ -5,7 +5,7 @@ import threading
 
 camera = picamera.PiCamera()
 picture_path = '/canteen_image/'
-seconds_between_captures = 5
+seconds_between_captures = 20
 
 def capture():
     file_name = os.getcwd() + picture_path + 'image.jpg'
