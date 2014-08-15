@@ -25,6 +25,5 @@ def run_button_job():
         if button_pressed and button_fired == 0:
             button_fired = 1
             print 'Button Pressed!'
-            post_lunch_is_ready()
 
 run_button_job()
