@@ -3,7 +3,7 @@ import requests
 
 ser = serial.Serial('/dev/ttyACM0', 9600)
 
-def post_lunch_is_ready
+def post_lunch_is_ready():
     requests.post("http://quizup-elzar.herokuapp.com/lunch")
 
 def run_button_job():
